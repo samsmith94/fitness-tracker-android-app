@@ -1,4 +1,4 @@
-package com.example.android_app.ui.home;
+package com.example.android_app.ui.workout;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.android_app.R;
 
-public class HomeFragment extends Fragment {
+public class WorkoutFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private WorkoutViewModel workoutViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        workoutViewModel =
+                ViewModelProviders.of(this).get(WorkoutViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_workout, container, false);
+        final TextView textView = root.findViewById(R.id.text_workout);
+        workoutViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

@@ -1,16 +1,16 @@
-package com.example.android_app.ui.home;
+package com.example.android_app.ui.alarm;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class AlarmViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public AlarmViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is alarm fragment");
     }
 
     public LiveData<String> getText() {
